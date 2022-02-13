@@ -1,0 +1,41 @@
+
+
+/* Pc */
+@media (min-width: 1024px){
+    .drawbox {
+        width: 420px;
+        height: 420px;
+        margin-top: 12px;
+        & img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .drawbox {
+        width: 240px;
+        height: 240px;
+        margin-top: 12px;
+        & img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    
+}
+
+/* Mobile */
+@media (max-width: 739px){
+    .drawbox {
+        width: 220px;
+        height: 220px;
+        margin-top: 12px;
+        & img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

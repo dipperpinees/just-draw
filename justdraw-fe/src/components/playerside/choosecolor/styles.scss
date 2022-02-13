@@ -1,0 +1,39 @@
+.choose-color {
+    position: relative;
+    &-button {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        border: 3px solid #ccc;
+    }
+    &-tools {
+        display: flex;
+        align-items: center;
+        padding: 8px;
+        & svg {
+            font-size: 36px;
+            margin-left: 12px;
+        }
+    }
+    &-box {
+        background-color: white;
+        border: 1px solid #ccc;
+        padding: 4px;
+        z-index: 2;
+        width: 190px;
+        position: absolute;
+        left: 32px;
+        top: 32px;
+        display: flex;
+        flex-wrap: wrap;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        border-bottom-left-radius: 8px;
+        &-element {
+            width: 32px;
+            height: 32px;
+            margin: 2px;
+            border: 0.5px solid #ccc;
+        }
+    }
+}

@@ -1,0 +1,67 @@
+.member {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    &-avatarname {
+        display: flex;
+        align-items: center;
+               
+        p {
+            margin-left: 8px;
+            font-size: 16px;
+        }
+    }
+
+    span {
+        font-size: 16px;
+    }
+
+    & svg {
+        // margin-right: 8px;
+        font-size: 20px;
+    }
+
+    &-status {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
+/* Pc */
+@media (min-width: 1024px){
+    
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    
+    
+}
+
+/* Mobile */
+@media (max-width: 739px){
+    .member {
+        & .avatar {
+            width: 20px!important;
+            height: 20px!important;
+        }
+
+        &-avatarname {   
+            p {
+                font-size: 12px;
+            }
+        }
+
+        span {
+            font-size: 12px;
+        }
+
+        & svg {
+            // margin-right: 8px;
+            font-size: 16px;
+        }
+    }
+}

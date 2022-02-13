@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Mali', cursive;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: 'Mali', cursive;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Mali', cursive;
+}
+
+.App {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #B9DE53;
+}
+
+input:focus-visible {
+  outline: none;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;;
+}
+
+.full-screen-button {
+  z-index: 3;
+  font-size: 24px;
+  background-color: false;
+  position: fixed;
+  background-color: transparent;
+  top: 12px;
+  left: 12px;
+  border: none;
+}

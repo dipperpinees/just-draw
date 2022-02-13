@@ -1,0 +1,31 @@
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal {
+    background-color: white;
+    width: 260px;
+    height: 80px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.modal-ok {
+    background-color: #b9de53;
+    color: white;
+    font-size: 16px;
+    border-radius: 2px;
+    padding: 4px;
+}

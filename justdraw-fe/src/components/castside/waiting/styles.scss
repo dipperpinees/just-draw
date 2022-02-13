@@ -1,0 +1,130 @@
+.waiting {
+    &-settings {
+        border-radius: 8px;
+        height: 90%;
+        width: 56%;
+        background-color: white;
+        margin: 8px;
+        padding: 16px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        &-start {
+            background-color: #B9DE53;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 12px;
+            padding: 8px;
+            font-weight: 600;
+            border-radius: 8px;
+            color: black;
+            &:hover {
+                cursor: pointer;
+                opacity: 0.8;
+            }
+        }
+
+        &-time {
+            display: flex;
+            
+            & > div {
+                padding: 8px;
+                border: 1px solid #9DE6E2;
+                border-radius: 8px;
+                margin: 0px 8px;
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: #9DE6E2;
+                }
+            }
+
+            &-choose {
+                background-color: #9DE6E2;  
+            }
+        }
+
+        &-categories {
+            margin: 24px 0px;
+            width: 100%;
+            // height: 70%;
+            display: flex;
+            flex-wrap: wrap;
+            max-height: 72%;
+            overflow: auto;
+            &-choose {
+                background-color: #9DE6E2;
+            }
+            & img {
+                width: 92px;
+                padding: 8px;
+            }
+            & > div {
+                padding: 8px;
+                border: 1px solid #9DE6E2;
+                border-radius: 8px;
+                margin: 8px;
+                padding: 4px;
+                &:hover {
+                    cursor: pointer;
+                    background-color: #9DE6E2;
+                }
+                & h5 {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+/* Pc */
+@media (min-width: 1024px){
+    
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    
+    
+}
+
+/* Mobile */
+@media (max-width: 739px){
+    .waiting {
+        &-settings {
+            width: 60%;
+            padding: 8px;
+            &-categories {
+                margin: 4px 0px;
+                max-height: 51%;
+                & img {
+                    width: 42px;
+                }
+                & h5 {
+                    font-size: 8px;
+                }
+            }
+
+            & h3 {
+                font-size: 12px;
+                margin-left: 8px;
+
+            }
+
+            &-time {
+                margin: 0px 4px;
+                & > div {
+                    font-size: 10px;
+                    margin: 4px;
+                }
+            }
+
+            &-start {
+                margin: 8px;
+                font-size: 12px;
+            }
+        }   
+        
+    }
+}

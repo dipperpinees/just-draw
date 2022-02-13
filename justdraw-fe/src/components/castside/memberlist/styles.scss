@@ -1,0 +1,16 @@
+.member-list {
+    height: 90%;
+    width: 22%;
+    background-color: white;
+    margin: 8px;
+    border-radius: 8px;
+    padding: 8px;
+    overflow: auto;
+} 
+
+@media (max-width: 739px){
+    .member-list {
+        width: 24%;
+        padding: 0;
+    }
+}
