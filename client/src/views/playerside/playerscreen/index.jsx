@@ -20,7 +20,7 @@ function PlayerScreen(props) {
     const [showModal, setShowModal] = useState(false);
 
     useEffect(() => {
-        socket = io("https://api.drawiz.space/", {
+        socket = io("http://192.168.29.105:8000/", {
             query: {type: "join",avatar: searchParams.get("avatar"), name: searchParams.get("name"), roomId: searchParams.get("roomId")}
         });
 

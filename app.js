@@ -11,7 +11,6 @@ const io = require("socket.io")(server, {
 
 server.listen(process.env.PORT || 8000);
 
-// const listRoomMasters = {};
 const listRoom = {};
 const listClient = {};
 

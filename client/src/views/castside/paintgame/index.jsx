@@ -18,7 +18,7 @@ function PaintGame(props) {
     const [endAudio] = useState(new Audio(sound2));
 
     useEffect(() => {
-        socket = io("https://api.drawiz.space/", {
+        socket = io("http://192.168.29.105:8000/", {
             query: {type: "create"}
         })
 
