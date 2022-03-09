@@ -1,4 +1,4 @@
-## <a href="http://draw.hiepnguyen.site/">DEMO</a>
+## <a href="https://drawgame.vercel.app/">DEMO</a>
 
 ## Install packages
 #### `npm install && npm install --cwd client` 
