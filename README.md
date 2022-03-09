@@ -1,4 +1,4 @@
-## <a href="https://draw.hiepnguyen.site/">DEMO</a>
+## <a href="http://draw.hiepnguyen.site/">DEMO</a>
 
 ## Install packages
 #### `npm install && npm install --cwd client` 
