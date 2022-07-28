@@ -20,7 +20,7 @@ function PlayerScreen(props) {
     const [showModal, setShowModal] = useState(false);
 
     useEffect(() => {
-        socket = io("http://192.168.29.105:8000/", {
+        socket = io(process.env.REACT_APP_API_ENDPOINT, {
             query: {type: "join",avatar: searchParams.get("avatar"), name: searchParams.get("name"), roomId: searchParams.get("roomId")}
         });
 
@@ -34,7 +34,7 @@ function PlayerScreen(props) {
                 alert("Phòng không tồn tại");
                 navigate("/join");
             } else {
-                const {roomId, socketId} = args;
+                const {roomId} = args;
                 setRoomId(roomId);
             }
             

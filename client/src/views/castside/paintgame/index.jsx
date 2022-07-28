@@ -18,7 +18,7 @@ function PaintGame(props) {
     const [endAudio] = useState(new Audio(sound2));
 
     useEffect(() => {
-        socket = io("http://192.168.29.105:8000/", {
+        socket = io(process.env.REACT_APP_API_ENDPOINT, {
             query: {type: "create"}
         })
 

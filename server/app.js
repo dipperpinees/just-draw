@@ -150,7 +150,6 @@ io.on('connection', async (socket) => {
     });
 });
 
-// reset quiz cho moi man choi
 const handleResetNewQuiz = (list, paintId) => {
     list.forEach((player) => {
         player.isAnswer = false;

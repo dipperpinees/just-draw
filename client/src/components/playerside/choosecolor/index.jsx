@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
+import { BiEraser, BiRefresh, BiUndo } from "react-icons/bi";
 import "./styles.scss";
-import { BiUndo, BiEraser, BiRedo, BiRefresh } from "react-icons/bi";
 
 function ChooseColor({setLineColor, setLineWidth, undo, redo, clear}) {
     const colors = ["#000", "#fff", "#FFFF00", "#008000", "#FFC0CB", "#800080", "#0000FF", "#ADD8E6", "#F08080", "#E0FFFF", "#FFA500", "#FF0000"];

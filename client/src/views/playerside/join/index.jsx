@@ -14,13 +14,12 @@ function Join(props) {
     const handleJoinRoom = (e) => {
         e.preventDefault();
         const formData = new FormData(e.target);
-        console.log()
         navigate(`/play?name=${formData.get("name")}&roomId=${formData.get("roomid")}&avatar=${avatar}`);
     }
 
     useEffect(() => {
         roomIdRef.current.value = searchParams.get("roomId");
-    }, [])
+    }, [searchParams])
 
     return (
         <form className='join' onSubmit={handleJoinRoom}>

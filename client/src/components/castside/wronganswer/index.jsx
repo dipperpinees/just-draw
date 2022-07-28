@@ -10,7 +10,7 @@ function WrongAnswer({socket}) {
                 setWrongAnswer(`${name}: ${answer}`)
             }
         })
-    }, [])
+    }, [socket])
 
     return (
         <span className="wrong">
