@@ -12,7 +12,7 @@ function PlayerScreen(props) {
     const [searchParams] = useSearchParams();
     const [isPaint, setIsPaint] = useState(false);
     const [isGuess, setIsGuess] = useState(false);
-    const [waitMessage, setWaitMessage] = useState("Đợi trò chơi bắt đầu");
+    const [waitMessage, setWaitMessage] = useState("Wait for the new game");
     const navigate = useNavigate();
     const [roomId, setRoomId] = useState("");
     const [quiz, setQuiz] = useState("");
@@ -31,7 +31,7 @@ function PlayerScreen(props) {
 
         socket.on("join", (args) => {
             if(args === 'error') {
-                alert("Phòng không tồn tại");
+                alert("This room does not exist");
                 navigate("/join");
             } else {
                 const {roomId} = args;
@@ -50,14 +50,14 @@ function PlayerScreen(props) {
         })
 
         socket.on("endquiz", () => {
-            setWaitMessage("Đợi trò chơi bắt đầu");
+            setWaitMessage("Wait for the new game");
             setIsPaint(false);
             setIsGuess(false);
         })   
         
         socket?.on("status", ({type}) => {
             if(type === 'error') {
-                alert("Chủ phòng đã rời phòng");
+                alert("The owner of the room has left the room");
                 navigate("/join");
             }
         })
@@ -67,9 +67,8 @@ function PlayerScreen(props) {
         if(compareQuiz(answer, quiz)) {
             socket.emit("answer", {isTrue: true, roomId: roomId, answer: answer});
             setIsGuess(false);
-            setWaitMessage("Bạn đã trả lời đúng, đợi màn chơi mới");
+            setWaitMessage("You answered correctly, wait for the new game");
         } else {
-            // alert("Đáp án sai");
             setShowModal(true);
             socket.emit("answer", {isTrue: false, roomId: roomId, answer: answer});
         }
@@ -83,26 +82,23 @@ function PlayerScreen(props) {
     return (
     <>
         {isPaint && <div className="player-screen">
-            <h5>Vẽ từ bên dưới đây</h5>
+            <h5>Draw the words below</h5>
             <h2>{quiz}</h2>
             <Paint makeImage={(data) => socket.emit("paint", {base64: data, roomId: roomId})}/>
-            <div>
-                {/* <h5>Hiep Nguyen</h5> */}
-            </div>
         </div>}
 
         {isGuess && <div className="player-screen" style={{alignItems: "center"}}>
-            <h5>Đoán từ bạn thấy trên màn hình</h5> 
+            <h5>Guess the word you see on the screen</h5> 
             <input className="player-screen-input" type="text" onChange={(e) => setAnswer(e.target.value)}/>
             <button className="player-screen-submit" onClick={handleSendAnswer}>OK</button>
         </div>} 
 
         {!isGuess && !isPaint && <div className="player-screen" style={{alignItems: "center"}}> 
-            {waitMessage === "Đợi trò chơi bắt đầu" && <button className="player-screen-leave" onClick={handleLeaveRoom}> Rời phòng </button>}
+            {waitMessage === "Wait for the new game" && <button className="player-screen-leave" onClick={handleLeaveRoom}> Leave room </button>}
             {waitMessage} 
         </div>}
 
-        {showModal && <Modal message="Đáp án sai" onClose={() => setShowModal(false)}/>}
+        {showModal && <Modal message="Wrong answer" onClose={() => setShowModal(false)}/>}
     </>
     );
 }
