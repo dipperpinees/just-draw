@@ -37,7 +37,7 @@ function Join(props) {
             </div>
             <input type="text" ref={roomIdRef} name="roomid" required  placeholder='Room Id'/>
             <input type="text" name="name" required placeholder='Name'/>
-            <button type="submit">Tham gia</button>
+            <button type="submit">Join</button>
         </form>
     );
 }
