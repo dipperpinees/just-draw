@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import CanvasDraw from 'react-canvas-draw';
-import ChooseColor from '../choosecolor';
+import ChooseColor from '../ChooseColor';
 import "./styles.scss";
 
 function Paint({makeImage}) {

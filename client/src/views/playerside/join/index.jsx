@@ -1,6 +1,6 @@
 import React, { useState , useEffect, useRef } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
-import Avatar from '../../../components/castside/avatar';
+import Avatar from '../../../components/CastSide/Avatar';
 import { avatarList } from '../../../helper/avatarList';
 import "./styles.scss";
 

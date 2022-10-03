@@ -29,7 +29,7 @@ const loadListWord = async (name) => {
         const list = loadAllQuiz();
         return list;
     }
-    const list = await fs.readFileSync(`./listquiz/${name}.txt`).toString().split("\n");
+    const list = await fs.readFileSync(`./listQuiz/${name}.txt`).toString().split("\n");
     return list;
 }
 

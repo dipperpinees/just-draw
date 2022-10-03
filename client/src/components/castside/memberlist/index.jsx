@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Member from '../member';
+import Member from '../Member';
 import "./styles.scss";
 
 function MemberList({socket}) {

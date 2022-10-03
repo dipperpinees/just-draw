@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import Countdown from 'react-countdown';
 import { handleWordQuiz } from '../../../helper/handleQuiz';
-import DrawBox from '../drawbox';
-import GameSummary from '../gamesummary';
-import WrongAnswer from '../wronganswer';
+import DrawBox from '../DrawBox';
+import GameSummary from '../GameSummary';
+import WrongAnswer from '../WrongAnswer';
 import "./styles.scss";
 
 

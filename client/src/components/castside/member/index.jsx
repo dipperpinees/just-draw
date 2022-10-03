@@ -1,7 +1,7 @@
 import React from 'react';
 import { avatarList } from '../../../helper/avatarList';
 import { handleName } from '../../../helper/handleQuiz';
-import Avatar from '../avatar';
+import Avatar from '../Avatar';
 import "./styles.scss";
 import { BiPaint } from "react-icons/bi";
 

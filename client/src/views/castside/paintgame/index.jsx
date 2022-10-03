@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { io } from 'socket.io-client';
-import Draw from '../../../components/castside/draw';
-import MemberList from '../../../components/castside/memberlist';
-import WaitingScreen from '../../../components/castside/waiting';
+import Draw from '../../../components/CastSide/Draw';
+import MemberList from '../../../components/CastSide/MemberList';
+import WaitingScreen from '../../../components/CastSide/Waiting';
 import "./styles.scss";
 import sound from '../../../assets/sound/draw.mp3';
 import sound2 from '../../../assets/sound/endgame.mp3';

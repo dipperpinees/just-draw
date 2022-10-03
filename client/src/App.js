@@ -1,11 +1,10 @@
 import { Route, Routes } from "react-router-dom";
-import Home from './views/castside/home';
-import PaintGame from './views/castside/paintgame';
-import JoinGame from './views/playerside/join';
-import PlayerScreen from './views/playerside/playerscreen';
+import Home from './views/CastSide/Home';
+import PaintGame from './views/CastSide/PaintGame';
+import JoinGame from './views/PlayerSide/Join';
+import PlayerScreen from './views/PlayerSide/PlayerScreen';
 import { BsFullscreen, BsFullscreenExit } from "react-icons/bs";
 import { useState } from "react";
-import TestPaint from "./components/testpaint";
 
 function App() {
   const [showFullScreenButton, setShowFullScreenButton] = useState(true);
@@ -34,7 +33,6 @@ function App() {
         {/* player site */}
         <Route path="/join" element={<JoinGame />} />
         <Route path="/play" element={<PlayerScreen />} />
-        <Route path="test" element={<TestPaint />}/>
       </Routes>
     </div>
   );

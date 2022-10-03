@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Member from '../member';
+import Member from '../Member';
 import "./styles.scss";
 
 function GameSummary({summaryList, setScreen}) {

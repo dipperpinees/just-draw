@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { io } from 'socket.io-client';
-import Modal from '../../../components/playerside/modal';
-import Paint from '../../../components/playerside/paint';
+import Modal from '../../../components/PlayerSide/Modal';
+import Paint from '../../../components/PlayerSide/Paint';
 import { compareQuiz } from '../../../helper/handleQuiz';
 import "./styles.scss";
 
